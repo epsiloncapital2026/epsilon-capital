@@ -29,8 +29,8 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        card: "0 4px 24px -4px rgba(0, 0, 0, 0.08)",
-        "card-hover": "0 12px 32px -8px rgba(0, 0, 0, 0.12)",
+        card: "0 4px 20px -4px rgba(0, 0, 0, 0.07)",
+        "card-hover": "0 10px 28px -8px rgba(0, 0, 0, 0.1)",
       },
     },
   },

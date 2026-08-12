@@ -43,7 +43,7 @@ export function SectionHeader({
   light = false,
 }: SectionHeaderProps) {
   return (
-    <div className={`mb-14 md:mb-16 ${centered ? "text-center" : ""}`}>
+    <div className={`mb-10 md:mb-12 ${centered ? "text-center" : ""}`}>
       <h2
         className={`text-3xl font-semibold tracking-tight md:text-4xl lg:text-[2.5rem] ${
           light ? "text-white" : "text-brand-black"

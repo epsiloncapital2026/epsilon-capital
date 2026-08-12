@@ -17,7 +17,7 @@ interface ButtonProps {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand-orange text-white shadow-md shadow-brand-orange/20 hover:bg-brand-orange-dark hover:shadow-lg hover:shadow-brand-orange/25 hover:scale-[1.02] active:scale-[0.98]",
+    "bg-brand-orange text-white shadow-sm shadow-brand-orange/10 hover:bg-brand-orange-dark hover:shadow-md hover:shadow-brand-orange/15 hover:scale-[1.02] active:scale-[0.98]",
   secondary:
     "bg-white text-brand-black border border-brand-gray-200 hover:border-brand-gray-400 hover:bg-brand-gray-50 hover:scale-[1.01] active:scale-[0.99]",
   outline:
@@ -42,7 +42,7 @@ export function Button({
   onClick,
   type = "button",
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 ease-out ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-300 ease-out ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   const content = (
     <>

@@ -28,8 +28,8 @@ export const metadata: Metadata = {
       "Cabinet de conseil en transformation organisationnelle.",
   },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo1.jpeg",
+    apple: "/logo1.jpeg",
   },
 };
 

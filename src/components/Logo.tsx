@@ -3,37 +3,32 @@ import Link from "next/link";
 
 interface LogoProps {
   className?: string;
-  size?: number;
-  /** "wordmark" for light backgrounds, "image" for dark backgrounds */
-  variant?: "wordmark" | "image";
+  height?: number;
+  /** "light" for white backgrounds, "dark" for dark backgrounds */
+  variant?: "light" | "dark";
 }
+
+const logoSources = {
+  light: "/logo1.jpeg",
+  dark: "/logo.png",
+} as const;
 
 export function Logo({
   className = "",
-  size = 44,
-  variant = "wordmark",
+  height = 40,
+  variant = "light",
 }: LogoProps) {
   return (
     <Link href="/" className={`inline-flex shrink-0 items-center ${className}`}>
-      {variant === "image" ? (
-        <Image
-          src="/logo.png"
-          alt="Epsilon Capital"
-          width={size}
-          height={size}
-          priority
-          className="rounded-md"
-        />
-      ) : (
-        <span
-          className="select-none font-semibold tracking-tight text-brand-black"
-          style={{ fontSize: size * 0.45 }}
-        >
-          <span className="font-normal lowercase">epsilon</span>
-          <span className="uppercase">CAPITAL</span>
-          <span className="inline-block h-[0.35em] w-[0.35em] translate-y-[-0.05em] rounded-full bg-brand-orange align-middle" />
-        </span>
-      )}
+      <Image
+        src={logoSources[variant]}
+        alt="Epsilon Capital"
+        width={200}
+        height={height}
+        priority={variant === "light"}
+        className="h-auto w-auto object-contain"
+        style={{ maxHeight: `${height}px`, width: "auto" }}
+      />
     </Link>
   );
 }
