@@ -19,6 +19,7 @@ export function Logo({
 }: LogoProps) {
   const { src, aspect } = LOGO_SOURCES[variant];
   const width = Math.round(height * aspect);
+  const isDark = variant === "dark";
 
   return (
     <Link
@@ -31,9 +32,17 @@ export function Logo({
         alt="Epsilon Capital"
         width={width}
         height={height}
-        priority={variant === "light"}
-        className="max-w-full object-contain"
-        style={{ height, width: "auto", maxWidth: "min(100%, 420px)" }}
+        priority={!isDark}
+        className={
+          isDark
+            ? "h-auto w-full max-h-14 object-contain object-left sm:max-h-16 md:max-h-[4.5rem]"
+            : "max-w-full object-contain"
+        }
+        style={
+          isDark
+            ? { maxWidth: "360px" }
+            : { height, width: "auto", maxWidth: "min(100%, 420px)" }
+        }
       />
     </Link>
   );
