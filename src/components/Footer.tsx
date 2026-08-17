@@ -21,7 +21,7 @@ export function Footer() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             <div>
-              <Logo height={44} variant="dark" />
+              <Logo height={62} variant="dark" />
               <p className="mt-4 text-sm leading-relaxed text-white/60">
                 Cabinet de conseil en stratégie, organisation, transformation et
                 développement des compétences.
