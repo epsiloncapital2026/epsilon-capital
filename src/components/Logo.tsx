@@ -4,30 +4,33 @@ import Link from "next/link";
 interface LogoProps {
   className?: string;
   height?: number;
-  /** "light" for white backgrounds, "dark" for dark backgrounds */
   variant?: "light" | "dark";
 }
 
-const logoSources = {
-  light: "/logo1.jpeg",
-  dark: "/logo.png",
-} as const;
+const LOGO_ASPECT = 1009 / 505;
 
 export function Logo({
   className = "",
-  height = 40,
+  height = 52,
   variant = "light",
 }: LogoProps) {
+  const src = variant === "dark" ? "/logo1-dark.png" : "/logo1.png";
+  const width = Math.round(height * LOGO_ASPECT);
+
   return (
-    <Link href="/" className={`inline-flex shrink-0 items-center ${className}`}>
+    <Link
+      href="/"
+      className={`inline-flex shrink-0 items-center ${className}`}
+      aria-label="Epsilon Capital — Accueil"
+    >
       <Image
-        src={logoSources[variant]}
+        src={src}
         alt="Epsilon Capital"
-        width={200}
+        width={width}
         height={height}
         priority={variant === "light"}
-        className="h-auto w-auto object-contain"
-        style={{ maxHeight: `${height}px`, width: "auto" }}
+        className="object-contain"
+        style={{ height, width }}
       />
     </Link>
   );

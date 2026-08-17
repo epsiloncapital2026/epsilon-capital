@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, Globe, Linkedin } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
 import { Logo } from "./Logo";
 
 const quickLinks = [
@@ -21,7 +21,7 @@ export function Footer() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             <div>
-              <Logo height={62} variant="dark" />
+              <Logo height={52} variant="dark" />
               <p className="mt-4 text-sm leading-relaxed text-white/60">
                 Cabinet de conseil en stratégie, organisation, transformation et
                 développement des compétences.
@@ -56,15 +56,6 @@ export function Footer() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="tel:+212522000000"
-                    className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-                  >
-                    <Phone size={16} strokeWidth={1.5} />
-                    +212 5 22 00 00 00
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="mailto:contact@epsiloncapital.ma"
                     className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
                   >
@@ -81,17 +72,6 @@ export function Footer() {
                   >
                     <Globe size={16} strokeWidth={1.5} />
                     www.epsiloncapital.ma
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/company/epsilon-capital"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-white"
-                  >
-                    <Linkedin size={16} strokeWidth={1.5} />
-                    LinkedIn
                   </a>
                 </li>
               </ul>

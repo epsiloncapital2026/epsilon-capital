@@ -37,7 +37,7 @@ export function Hero() {
         <FadeIn delay={0.15} className="relative">
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl lg:aspect-[5/4]">
             <Image
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80&auto=format&fit=crop"
+              src="/photo.png"
               alt="Réunion de travail — conseil et accompagnement organisationnel"
               fill
               priority
