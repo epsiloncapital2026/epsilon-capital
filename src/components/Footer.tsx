@@ -22,12 +22,12 @@ export function Footer() {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             <div>
               <Logo height={52} variant="dark" />
+              <p className="mt-3 text-sm italic text-white/40">
+                growth <span className="text-brand-orange">engendered</span>.
+              </p>
               <p className="mt-4 text-sm leading-relaxed text-white/60">
                 Cabinet de conseil en stratégie, organisation, transformation et
                 développement des compétences.
-              </p>
-              <p className="mt-4 text-sm italic text-white/40">
-                growth <span className="text-brand-orange">engendered</span>.
               </p>
             </div>
 
