@@ -7,15 +7,18 @@ interface LogoProps {
   variant?: "light" | "dark";
 }
 
-const LOGO_ASPECT = 1009 / 505;
+const LOGO_SOURCES = {
+  light: { src: "/logo1.png", aspect: 1009 / 505 },
+  dark: { src: "/logo2.png", aspect: 1430 / 233 },
+} as const;
 
 export function Logo({
   className = "",
   height = 52,
   variant = "light",
 }: LogoProps) {
-  const src = variant === "dark" ? "/logo1-dark.png" : "/logo1.png";
-  const width = Math.round(height * LOGO_ASPECT);
+  const { src, aspect } = LOGO_SOURCES[variant];
+  const width = Math.round(height * aspect);
 
   return (
     <Link
@@ -29,8 +32,8 @@ export function Logo({
         width={width}
         height={height}
         priority={variant === "light"}
-        className="object-contain"
-        style={{ height, width }}
+        className="max-w-full object-contain"
+        style={{ height, width: "auto", maxWidth: "min(100%, 420px)" }}
       />
     </Link>
   );
